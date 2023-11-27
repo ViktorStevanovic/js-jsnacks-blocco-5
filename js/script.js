@@ -15,47 +15,70 @@ const automobili = [
     {
         marca: 'audi',
         modello: 'a1',
-        alimentazione: 'benzina'
+        alimentazione: 'diesel'
     },
     {
         marca: 'bmw',
         modello: 'serie 1',
+        alimentazione: 'diesel'
+    },
+    {
+        marca: 'mercedes',
+        modello: 'classe a',
+        alimentazione: 'elettrico'
+    },
+    {
+        marca: 'renault',
+        modello: 'clio',
+        alimentazione: 'gpl'
+    },
+    {
+        marca: 'fiat',
+        modello: 'punto',
         alimentazione: 'benzina'
     },
     {
-        marca: 'audi',
-        modello: 'a3',
-        alimentazione: 'benzina'
+        marca: 'bmw',
+        modello: 'm8',
+        alimentazione: 'elettrico'
+    },
+    {
+        marca: 'mercedes',
+        modello: 'classe  c',
+        alimentazione: 'diesel'
     },
     {
         marca: 'audi',
-        modello: 'a3',
-        alimentazione: 'benzina'
+        modello: 'a7',
+        alimentazione: 'gpl'
     },
     {
         marca: 'audi',
-        modello: 'a3',
-        alimentazione: 'benzina'
-    },
-    {
-        marca: 'audi',
-        modello: 'a3',
-        alimentazione: 'benzina'
-    },
-    {
-        marca: 'audi',
-        modello: 'a3',
-        alimentazione: 'benzina'
-    },
-    {
-        marca: 'audi',
-        modello: 'a3',
-        alimentazione: 'benzina'
-    },
-    {
-        marca: 'audi',
-        modello: 'a3',
-        alimentazione: 'benzina'
+        modello: 'a5',
+        alimentazione: 'metano'
     },
 
 ]
+
+const automobiliBenzina = automobili.filter((element) =>{
+    if(element.alimentazione == 'benzina'){
+        return true
+    }
+});
+console.log(automobiliBenzina)
+
+const automobiliDiesel = automobili.filter((element) =>{
+    if(element.alimentazione == 'diesel'){
+        return true
+    }
+});
+console.log(automobiliDiesel)
+
+const automobiliGenerali = automobili.filter((element) =>{
+    if(element.alimentazione !== 'diesel' && element.alimentazione !== 'benzina'){
+        return true
+    }
+});
+console.log(automobiliGenerali)
+
+
